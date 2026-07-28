@@ -1,4 +1,5 @@
 # Blueprints for Home Assistant
+(Fork from: https://github.com/seanharsh/Home-Assistant-Blueprints)
 
 ## Sunrise Light Simulator
 
@@ -6,7 +7,7 @@ A blueprint that gradually brightens your lights and changes their color tempera
 
 ### Features
 
-- 🌅 **Natural sunrise simulation** - Gradually transitions from deep red/orange to bright daylight
+- 🌅 **Natural sunrise simulation** - Gradually transitions from deep red/orange to warm daylight
 - 🎯 **Flexible targeting** - Select individual lights, multiple entities, entire areas, devices, or labels
 - ⏱️ **Customizable duration** - Set sunrise length from 5 to 120 minutes
 - 💡 **Adjustable brightness** - Set maximum brightness as a percentage (1-100%)
@@ -48,8 +49,8 @@ Your lights will now gradually wake you up with a natural sunrise simulation eve
 
 The blueprint uses a smooth, non-linear curve to simulate a natural sunrise:
 
-- **Color temperature**: Progresses from warm (2000K) to cool daylight (5500K)
-- **Brightness curve**: Uses a non-linear progression (power of 1.3) for natural-feeling transitions
+- **Color temperature**: Progresses from warm (1800K) to sunrise (3000K)
+- **Brightness curve**: Uses a non-linear progression for natural-feeling transitions
 - **Smooth transitions**: Updates brightness at configurable intervals (default 30 seconds)
 - **Hardware aware**: Adjustable step interval and startup brightness for different light types
 - **Smart light monitoring**: Stops if the light is turned off during the simulation
@@ -91,7 +92,7 @@ The algorithm starts at your configured startup brightness and smoothly increase
 
 ### Installation
 
-[![Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint pre-filled.](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fraw.githubusercontent.com%2Fseanharsh%2FHome-Assistant-Blueprints%2Fmain%2Fautomation%2Fsunrise_light_simulator.yaml)
+[![Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint pre-filled.](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fraw.githubusercontent.com%2FSentoCrespo%2FHome-Assistant-Blueprints%2Fmain%2Fautomation%2Fsunrise_light_simulator.yaml)
 
 ### Option 2: Manual Installation
 1. Copy the blueprint YAML code
@@ -99,40 +100,3 @@ The algorithm starts at your configured startup brightness and smoothly increase
 3. Click the **Import Blueprint** button
 4. Paste the URL or YAML content
 5. Click **Preview** and then **Import**
-
-## Zigbee2MQTT Dual Setpoint Fix
-
-Helps fix issues where a high and low setpoint are required for some thermostats in Zigbee2MQTT.
-
-### How It Works
-
-Sets a target temp for high and low values.
-
-### Requirements
-
-- Home Assistant 2021.3 or newer
-- Zigbee Thermostat with dual setpoint requirement such as the SAGE (Pearl)
-
-### Installation
-
-[![Open your Home Assistant instance and show the blueprint import dialog with a specific blueprint pre-filled.](https://my.home-assistant.io/badges/blueprint_import.svg)](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fraw.githubusercontent.com%2Fseanharsh%2FHome-Assistant-Blueprints%2Fmain%2Fautomation%2Fz2m_thermostat_dual_setpoint_fix.yaml)
-
-### Option 2: Manual Installation
-1. Copy the blueprint YAML code
-2. In Home Assistant, go to **Settings** → **Automations & Scenes** → **Blueprints**
-3. Click the **Import Blueprint** button
-4. Paste the URL or YAML content
-5. Click **Preview** and then **Import**
-
-
-## License
-
-These blueprints are free to use and modify for personal and commercial purposes.
-
-## Contributing
-
-Found a bug or have a suggestion? Please open an issue or submit a pull request!
-
-## Credits
-
-Created for the Home Assistant community.
